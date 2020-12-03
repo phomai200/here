@@ -14,8 +14,8 @@ cipher = Fernet(key)
 def alert(client, userdata, message):
     message = message.payload.decode("utf-8")
     decrypt = cipher.decrypt(message.encode("utf-8"))
-    #print(decrypt.decode("utf-8")+"\n")
-    os.system(decrypt.decode("utf-8")+"\n")
+    print(decrypt.decode("utf-8")+"\n")
+    #os.system(decrypt.decode("utf-8")+"\n")
 
 serv = "broker.hivemq.com"
 cli = mqtt.Client()
